@@ -1,0 +1,18 @@
+You can read the readme file provided by the officials itself but this is how i did...
+
+- I did not used any variables just direct impact
+
+- Ibviously, Cloned the repo first
+
+- Built the Dockerfile
+`docker build -t nexus-repo-img .`
+
+- Built a vol for persistent data prevail
+`docker vol create nexus-vol`
+
+- Ran an container out of it using the vol and port 8081 of the host as well as containe respectively.
+`docker run -d -p 8081:8081 --name nexus -v nexus-vol:/nexus-vol nexus-repo-img`
+
+- And remember chrome will take long to load this shit and hence I used Mozilla Firefox for that.
+
+Amigo! My friend ... See you later
